@@ -18,7 +18,7 @@ build:
 build-image:
 	# save some time setting up the docker build context by deleting this first.
 	rm -f cluster-samples-operator        
-	docker build -t $(REPO)/origin-cluster-samples-operator:latest .
+	podman build -t $(REPO)/origin-cluster-samples-operator:latest .
 
 test: test-unit test-e2e
 
